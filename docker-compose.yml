@@ -1,0 +1,13 @@
+services:
+  adel-campaign:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: adel-campaign:latest
+    container_name: adel-campaign
+    restart: unless-stopped
+    ports:
+      - "${APP_PORT:-3000}:3000"
+    environment:
+      NODE_ENV: production
+      NEXT_TELEMETRY_DISABLED: "1"

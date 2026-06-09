@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1200" role="img" aria-label="ملعب كرة سلة مجتمعي">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0d3f2a"/>
+      <stop offset="0.55" stop-color="#118047"/>
+      <stop offset="1" stop-color="#1f2937"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#f8fafc" stop-opacity="0.46"/>
+      <stop offset="1" stop-color="#e5f4eb" stop-opacity="0.18"/>
+    </linearGradient>
+    <filter id="softBlur">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+  <rect width="1800" height="1200" fill="url(#sky)"/>
+  <circle cx="255" cy="230" r="180" fill="#ffffff" opacity="0.08" filter="url(#softBlur)"/>
+  <circle cx="1500" cy="210" r="260" fill="#ffffff" opacity="0.06" filter="url(#softBlur)"/>
+  <path d="M0 778 C310 690 585 705 900 760 C1200 812 1485 790 1800 682 L1800 1200 L0 1200 Z" fill="url(#floor)"/>
+  <g fill="none" stroke="#ffffff" stroke-linecap="round" opacity="0.42">
+    <path d="M92 1060 C475 905 1048 884 1708 1040" stroke-width="10"/>
+    <path d="M340 970 C620 870 1015 870 1465 972" stroke-width="6"/>
+    <path d="M900 790 L900 1175" stroke-width="6"/>
+    <circle cx="900" cy="982" r="120" stroke-width="6"/>
+    <path d="M250 1090 L560 850" stroke-width="5"/>
+    <path d="M1550 1090 L1240 850" stroke-width="5"/>
+  </g>
+  <g transform="translate(1260 315)" opacity="0.78">
+    <rect x="0" y="0" width="210" height="145" rx="8" fill="none" stroke="#ffffff" stroke-width="12"/>
+    <rect x="76" y="145" width="58" height="355" fill="#ffffff" opacity="0.35"/>
+    <circle cx="105" cy="185" r="48" fill="none" stroke="#ffffff" stroke-width="10"/>
+    <path d="M58 185 C80 218 130 218 152 185" fill="none" stroke="#ffffff" stroke-width="8"/>
+  </g>
+  <g opacity="0.22" fill="#ffffff">
+    <circle cx="280" cy="720" r="18"/>
+    <circle cx="335" cy="706" r="13"/>
+    <circle cx="390" cy="720" r="18"/>
+    <rect x="262" y="742" width="38" height="88" rx="18"/>
+    <rect x="374" y="742" width="38" height="88" rx="18"/>
+    <rect x="323" y="727" width="28" height="82" rx="14"/>
+  </g>
+  <g opacity="0.12" stroke="#ffffff" stroke-width="2">
+    <path d="M0 170 H1800"/>
+    <path d="M0 340 H1800"/>
+    <path d="M0 510 H1800"/>
+    <path d="M300 0 V1200"/>
+    <path d="M600 0 V1200"/>
+    <path d="M900 0 V1200"/>
+    <path d="M1200 0 V1200"/>
+    <path d="M1500 0 V1200"/>
+  </g>
+</svg>
