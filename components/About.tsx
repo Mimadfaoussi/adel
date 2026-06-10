@@ -7,7 +7,7 @@ export function About() {
         <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
           <div>
             <span className="section-kicker">من هو عادل قراش؟</span>
-            <h2 className="section-title dark:text-white">مدرب ومرب يعمل من الميدان لخدمة المجتمع.</h2>
+            <h2 className="section-title dark:text-white">مدرب ومربي يعمل من الميدان لخدمة المجتمع.</h2>
             <p className="section-copy dark:text-slate-300">
               ولد عادل قراش في 6 جويلية 1996 ببني مسوس، الجزائر العاصمة. هو مدرب رياضي
               وأستاذ تربية بدنية متخصص في تدريب كرة السلة وتطوير الفئات الشبانية، جمع بين

@@ -1,6 +1,7 @@
 import { About } from "@/components/About";
 import { Achievements } from "@/components/Achievements";
 import { Contact } from "@/components/Contact";
+import { FutureGoals } from "@/components/FutureGoals";
 import { Hero } from "@/components/Hero";
 import { Navigation } from "@/components/Navigation";
 import { Program } from "@/components/Program";
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <About />
       <Timeline />
+      <FutureGoals />
       <Achievements />
       <Program />
       <Contact />
