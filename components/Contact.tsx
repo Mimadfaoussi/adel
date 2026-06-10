@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Mail, Phone, Send } from "lucide-react";
+import { Facebook, Mail, Phone } from "lucide-react";
 
 export function Contact() {
   return (
@@ -19,74 +19,61 @@ export function Contact() {
               </p>
 
               <div className="mt-8 grid gap-3 text-sm font-bold text-emerald-50">
-                <a href="tel:+213000000000" className="inline-flex items-center gap-3 hover:text-white">
+                <a href="tel:0699078177" className="inline-flex items-center gap-3 hover:text-white">
                   <Phone size={18} />
-                  +213 000 000 000
+                  0699078177
                 </a>
-                <a href="mailto:contact@adel-campaign.dz" className="inline-flex items-center gap-3 hover:text-white">
+                <a href="mailto:adel.guerrache96@gmail.com" className="inline-flex items-center gap-3 hover:text-white">
                   <Mail size={18} />
-                  contact@adel-campaign.dz
+                  adel.guerrache96@gmail.com
                 </a>
               </div>
 
               <div className="mt-7 flex gap-3">
                 <a
-                  href="#contact"
+                  href="https://www.facebook.com/adel62bz#"
+                  target="_blank"
+                  rel="noreferrer"
                   className="grid size-11 place-items-center rounded-xl bg-white/10 text-white transition hover:bg-white hover:text-campaign-deep"
                   aria-label="Facebook"
                   title="Facebook"
                 >
                   <Facebook size={19} />
                 </a>
-                <a
-                  href="#contact"
-                  className="grid size-11 place-items-center rounded-xl bg-white/10 text-white transition hover:bg-white hover:text-campaign-deep"
-                  aria-label="Instagram"
-                  title="Instagram"
-                >
-                  <Instagram size={19} />
-                </a>
               </div>
             </div>
 
-            <form className="rounded-2xl bg-white p-5 text-campaign-ink shadow-soft sm:p-7 dark:bg-slate-950 dark:text-white">
-              <div className="grid gap-5">
-                <label className="grid gap-2 text-sm font-black">
-                  الاسم
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="اكتب اسمك"
-                    className="h-12 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-base outline-none transition placeholder:text-slate-400 focus:border-campaign-green focus:bg-white dark:border-white/10 dark:bg-slate-900 dark:focus:bg-slate-900"
-                  />
-                </label>
-                <label className="grid gap-2 text-sm font-black">
-                  الهاتف
-                  <input
-                    type="tel"
-                    name="phone"
-                    placeholder="رقم الهاتف"
-                    className="h-12 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-base outline-none transition placeholder:text-slate-400 focus:border-campaign-green focus:bg-white dark:border-white/10 dark:bg-slate-900 dark:focus:bg-slate-900"
-                  />
-                </label>
-                <label className="grid gap-2 text-sm font-black">
-                  الرسالة
-                  <textarea
-                    name="message"
-                    rows={5}
-                    placeholder="اكتب رسالتك أو اقتراحك"
-                    className="resize-none rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-base outline-none transition placeholder:text-slate-400 focus:border-campaign-green focus:bg-white dark:border-white/10 dark:bg-slate-900 dark:focus:bg-slate-900"
-                  />
-                </label>
-                <button
-                  type="submit"
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-campaign-green px-6 py-4 text-base font-black text-white transition hover:-translate-y-0.5 hover:bg-campaign-deep"
-                >
-                  انضم للحملة
-                  <Send size={18} />
-                </button>
-              </div>
-            </form>
+            <div className="grid gap-4 rounded-2xl bg-white p-5 text-campaign-ink shadow-soft sm:p-7 dark:bg-slate-950 dark:text-white">
+              <a
+                href="tel:0699078177"
+                className="group rounded-2xl border border-slate-100 bg-slate-50 p-5 transition hover:-translate-y-1 hover:border-campaign-green hover:shadow-soft dark:border-white/10 dark:bg-slate-900"
+              >
+                <span className="grid size-12 place-items-center rounded-xl bg-campaign-mint text-campaign-green transition group-hover:bg-campaign-green group-hover:text-white">
+                  <Phone size={22} />
+                </span>
+                <h3 className="mt-5 text-2xl font-black">اتصال مباشر</h3>
+                <p className="mt-2 text-lg font-bold text-slate-700 dark:text-slate-200">0699078177</p>
+                <p className="mt-2 leading-7 text-slate-600 dark:text-slate-300">
+                  للتواصل السريع، الاستفسار، أو المشاركة في أنشطة الحملة.
+                </p>
+              </a>
+
+              <a
+                href="mailto:adel.guerrache96@gmail.com"
+                className="group rounded-2xl border border-slate-100 bg-slate-50 p-5 transition hover:-translate-y-1 hover:border-campaign-green hover:shadow-soft dark:border-white/10 dark:bg-slate-900"
+              >
+                <span className="grid size-12 place-items-center rounded-xl bg-campaign-mint text-campaign-green transition group-hover:bg-campaign-green group-hover:text-white">
+                  <Mail size={22} />
+                </span>
+                <h3 className="mt-5 text-2xl font-black">البريد الإلكتروني</h3>
+                <p className="mt-2 break-all text-lg font-bold text-slate-700 dark:text-slate-200">
+                  adel.guerrache96@gmail.com
+                </p>
+                <p className="mt-2 leading-7 text-slate-600 dark:text-slate-300">
+                  أرسل اقتراحاتك أو طلبات التواصل مباشرة عبر البريد الإلكتروني.
+                </p>
+              </a>
+            </div>
           </div>
         </div>
       </div>
