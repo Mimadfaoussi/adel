@@ -26,21 +26,76 @@ Build and run with Docker Compose:
 docker compose up --build -d
 ```
 
-Open `http://localhost:3000`.
-
-To use another host port:
-
-```bash
-APP_PORT=8080 docker compose up --build -d
-```
-
-Open `http://localhost:8080`.
+Open `http://localhost` for local Docker testing, or `http://guerrache.online` on the VPS.
 
 Stop the container:
 
 ```bash
 docker compose down
 ```
+
+## VPS Deployment With Nginx And HTTPS
+
+This setup runs the Next.js app internally on Docker port `3000`, then exposes Nginx on public ports `80` and `443`.
+
+Domain:
+
+```text
+guerrache.online
+```
+
+Start HTTP first:
+
+```bash
+docker compose up --build -d adel-campaign nginx
+```
+
+Verify HTTP:
+
+```bash
+curl -I http://guerrache.online
+```
+
+Issue the first Let's Encrypt certificate:
+
+```bash
+docker compose run --rm certbot certonly \
+  --webroot \
+  --webroot-path /var/www/certbot \
+  --email adel.guerrache96@gmail.com \
+  --agree-tos \
+  --no-eff-email \
+  -d guerrache.online \
+  -d www.guerrache.online
+```
+
+Enable HTTPS after the certificate is created:
+
+```bash
+chmod +x scripts/enable-https.sh
+./scripts/enable-https.sh
+```
+
+Verify HTTPS:
+
+```bash
+curl -I https://guerrache.online
+```
+
+Set automatic certificate renewal on the VPS with cron:
+
+```bash
+chmod +x scripts/renew-certificates.sh scripts/enable-https.sh
+crontab -e
+```
+
+Add this line:
+
+```cron
+0 3 * * * cd /path/to/adel && ./scripts/renew-certificates.sh >> /var/log/adel-certbot-renew.log 2>&1
+```
+
+Replace `/path/to/adel` with the real deployment directory on the VPS.
 
 ## Notes
 
